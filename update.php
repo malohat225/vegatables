@@ -11,8 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if ($conn->query($sql)) {
         header("Location: read.php"); 
         exit();
-    } else {
-        $error = "Xatolik yuz berdi!";
     }
 }
 
@@ -31,10 +29,6 @@ $row = $result->fetch_assoc();
 <body>
 <div class="container my-5">
     <h1 class="text-center mb-4">Edit Product</h1>
-
-    <?php if(isset($error)) { ?>
-        <div class="alert alert-danger text-center"><?php echo $error; ?></div>
-    <?php } ?>
 
     <form method="POST" class="w-50 mx-auto">
         <div class="mb-3">
