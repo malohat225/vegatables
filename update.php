@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-$id = intval($_GET['id']);
+$id = $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $name = $_POST['name'];
